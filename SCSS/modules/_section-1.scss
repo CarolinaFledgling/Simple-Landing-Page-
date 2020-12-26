@@ -30,6 +30,7 @@
             text-align: center;
             margin: 1.5rem auto;
             width: 70%;
+            font-size: 0.9rem;
         }
     }
     &__description {
@@ -42,6 +43,7 @@
             margin: 0 auto;
             text-align: center;
             width: 60%;
+            font-size: 0.7rem;
         }
     }
 
@@ -70,12 +72,15 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    position: relative;
-
-
-
+    
     @include breakpoint-responsive("md") {
-        grid-row: 1 / 2;
+        grid-row: 1 / 2;   
     }
+    
+}
 
+.img{
+    @include breakpoint-responsive("md") {
+        width: 70%;
+    }
 }

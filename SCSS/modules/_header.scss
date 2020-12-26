@@ -18,13 +18,19 @@
         margin: 0 5px 0 5px;
         backface-visibility: hidden;
         font-size: 3rem;
-        letter-spacing: 1rem;
+        letter-spacing: .6rem;
         font-weight: 500;
         position: absolute;
         top: 25%;
         left: 50%;
         transform: translate(-50%, 50%);
         color: $white;
+        @include breakpoint-responsive("md"){
+            font-size: 1.1rem;
+        }
+        @include breakpoint-responsive("xs") {
+            font-size: 0.8rem;
+          }
 
     }
 
@@ -38,8 +44,12 @@
         font-weight: 500;
         color: $light-blue;
         text-align: center;
-
         line-height: 150%;
+        @include breakpoint-responsive("md") {
+            font-size: .7rem;
+            letter-spacing: 0.1rem;
+            top:30%;
+          }
     }
 
     &__logo {
