@@ -1,0 +1,78 @@
+//  Main style for all buttons
+.btn {
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0px 7px 5px -2px rgba(0, 0, 0, 0.32);
+    font-size: 0.9rem;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s linear;
+
+
+    @include breakpoint-responsive("md") {
+        padding: 13px 23px;
+    }
+}
+
+
+
+// Style for primary btn
+
+.btn-primary {
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0px 7px 5px -2px rgba(0, 0, 0, 0.32);
+    font-size: 0.9rem;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s linear;
+    color: $black;
+    background-color: $sunglow;
+
+    &:hover {
+        background-color: $sunglow-light;
+        border: 2px solid $sunglow-light;
+    }
+
+    @include breakpoint-responsive("md") {
+        padding: 13px 23px;
+        font-size: 0.8rem;
+        margin-right: 0.4rem;
+    }
+
+    @include breakpoint-responsive("xs") {
+        padding: 9px 13px;
+        font-size: 0.7rem;
+    }
+}
+
+// Style for secondary btn
+
+.btn-secondary {
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0px 7px 5px -2px rgba(0, 0, 0, 0.32);
+    font-size: 0.9rem;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s linear;
+    margin-left: 1rem;
+    color:$white;
+    background-color: $blue;
+
+    &:hover {
+        background-color: $light-blue;
+        border: 2px solid $light-blue;
+       
+    }
+
+    @include breakpoint-responsive("md") {
+        padding: 13px 23px;
+        font-size: 0.8rem;
+    }
+
+    @include breakpoint-responsive("xs") {
+        padding: 9px 13px;
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,17 @@
+// Responsive
+
+@mixin breakpoint-responsive($size) {
+    @media (max-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+// BREAKPOINTS
+$breakpoints: (
+    "xs": "375px",
+    "sm": "576px",
+    "md": "768px",
+    "lg": "1096px",
+    "xl": "1200px",
+    "xxl": "1440px",
+);

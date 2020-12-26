@@ -6,3 +6,11 @@
 @import "base/variables";
 @import "base/mixins";
 @import "base/reset";
+
+//modules
+@import "modules/header";
+@import "modules/btns";
+@import "modules/section#1";
+@import "modules/section#2";
+@import "modules/section#3";
+@import "modules/footer";
