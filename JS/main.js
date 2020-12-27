@@ -14,6 +14,8 @@ function createLiElement() {
         // console.log(idSection);
         const linkElement = document.createElement('a');
         linkElement.href = `#${idSection}`;
+        linkElement.textContent = idSection;
+        linkElement.classList.add('nav-list__link');
         console.log(linkElement);
 
     })
