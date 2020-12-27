@@ -779,6 +779,23 @@ button {
   }
 }
 
+.btn-scroll {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 16px;
+  border-radius: 10%;
+  border: none;
+  outline: none;
+  background-color: #C03221;
+  color: white;
+  padding: 1.5rem;
+}
+
+.btn-scroll:hover {
+  background-color: #c25043;
+}
+
 .section-hero {
   display: -ms-grid;
   display: grid;

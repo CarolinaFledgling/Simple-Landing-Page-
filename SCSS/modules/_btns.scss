@@ -76,3 +76,24 @@
         font-size: 0.7rem;
     }
 }
+
+
+// Button scroll to top 
+
+.btn-scroll{
+    // display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 16px;
+    border-radius: 10%;
+    border: none;
+    outline: none;
+    background-color: $red-orange;
+    color:white;
+    padding: 1.5rem;
+}
+
+.btn-scroll:hover{
+    background-color: $red-orange-light;
+}

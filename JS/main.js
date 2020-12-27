@@ -1,6 +1,6 @@
-// *** A dynamic Navbar with Js 
+// *** A dynamic Navbar 
 
-//  Useing DocumentFragment interface because is a lightweight version of the Document, if we make changes to the document fragment it doesnt affect the Document doesnt change performance.
+//  Using DocumentFragment interface because is a lightweight version of the Document, if we make changes to the document fragment it doesnt affect the Document, doesnt change performance.
 
 const ulList = document.querySelector('.nav-list');
 const sections = document.querySelectorAll('section')
@@ -20,7 +20,6 @@ function createLiElement() {
         // console.log(linkElement);
         navListElement.appendChild(linkElement)
         fragment.appendChild(navListElement)
-
     })
     ulList.appendChild(fragment)
     console.log(ulList)
@@ -28,8 +27,6 @@ function createLiElement() {
 
 
 createLiElement()
-
-
 
 // Hamburger menu 
 
@@ -41,3 +38,15 @@ function hamburgerMenu() {
 }
 
 menuBtn.addEventListener('click', hamburgerMenu)
+
+
+//  button scroll to top the page 
+
+function createBtn(){
+    const btnScroll = document.createElement('button')
+    btnScroll.textContent='TOP'
+    btnScroll.classList.add('btn-scroll')
+    document.body.appendChild(btnScroll)
+}
+
+createBtn();
