@@ -55,8 +55,17 @@ const btnScrollTop = document.querySelector('.btn-scroll')
 
 //user scrolls down 100px from the top of the document, show the button
 window.addEventListener('scroll', function () {
-    if (document.body.scrollTop > 100|| document.documentElement.scrollTop > 100) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         btnScrollTop.style.display = "block"
     } else
         btnScrollTop.style.display = "none"
 });
+
+//user clicks on the button, scroll to the top of the document
+
+function topPage() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+btnScrollTop.addEventListener('click', topPage)
