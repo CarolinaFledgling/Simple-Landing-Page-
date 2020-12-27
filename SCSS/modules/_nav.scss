@@ -1,8 +1,45 @@
 .nav-list {
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-around;
     margin-right: 1rem;
 
-    
+    @include breakpoint-responsive("md") {
+        height: 0vh;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: darken($blue, 5);
+        opacity: 0.9;
+        visibility: hidden;
+        overflow: hidden;
+        transition: all .3s linear;
+    }
+
+    &__link{
+        @include breakpoint-responsive("md"){
+            font-size: 1.5rem;
+        }
+    }
+
+    &__item{
+        @include breakpoint-responsive("md"){
+            margin:1rem 0
+        }
+    }
+}
+
+// for java script to show and hide 
+.hide {
+    display: block;
+}
+
+.show {
+    visibility: visible;
+    height: 100vh;
 }

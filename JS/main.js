@@ -28,3 +28,16 @@ function createLiElement() {
 
 
 createLiElement()
+
+
+
+// Hamburger menu 
+
+const menuBtn = document.querySelector('.menu-btn');
+
+function hamburgerMenu() {
+    menuBtn.classList.toggle('close');
+    ulList.classList.toggle('show');  
+}
+
+menuBtn.addEventListener('click', hamburgerMenu)

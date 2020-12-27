@@ -1,28 +1,36 @@
 .footer-info {
-    display: flex;
-    width: 100%;
-    padding: 0.5rem 0;
-    margin: 0.5rem auto;
-    justify-content: center;
-    align-items: center;
-    
-    &__paragraph {
-      text-align: center;
-      font-size: 0.8rem;
-      line-height: 1.1rem;
-      @include breakpoint-responsive("xs") {
-        font-size: 0.5rem;
-      }
-    }
-    &__link {
-      font-size: 0.8rem;
-      @include breakpoint-responsive("xs") {
-        font-size: 0.5rem;
-      }
-    }
-  
+  display: flex;
+  width: 100%;
+  padding: 0.5rem 0;
+  margin: 0.5rem auto;
+  justify-content: center;
+  align-items: center;
+
+  &__paragraph {
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+
     @include breakpoint-responsive("xs") {
-      width: 70%;
+      font-size: 0.5rem;
     }
   }
-  
+
+  &__link {
+    font-size: 0.8rem;
+    color: $black;
+
+    &:hover {
+      color: $blue;
+
+    }
+
+    @include breakpoint-responsive("xs") {
+      font-size: 0.5rem;
+    }
+  }
+
+  @include breakpoint-responsive("xs") {
+    width: 70%;
+  }
+}
