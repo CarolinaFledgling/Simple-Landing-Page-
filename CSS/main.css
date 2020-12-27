@@ -483,6 +483,17 @@ a:hover {
   }
 }
 
+button {
+  display: block;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-family: inherit;
+  text-decoration: none;
+  text-align: center;
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -559,6 +570,65 @@ a:hover {
 .header__logo {
   margin: 1rem;
   height: 70px;
+}
+
+.nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-right: 1rem;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 99;
+  right: 10%;
+  top: 40px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  display: none;
+}
+
+.menu-btn .btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: #FFFFFF;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.menu-btn.close {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.menu-btn.close .btn-line:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(5px, 5px);
+          transform: rotate(45deg) translate(5px, 5px);
+  background: #FFFFFF;
+}
+
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.close .btn-line:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translate(7px, -6px);
+          transform: rotate(-45deg) translate(7px, -6px);
+  background: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
 }
 
 .btn {
