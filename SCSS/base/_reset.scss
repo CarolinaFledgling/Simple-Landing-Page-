@@ -83,3 +83,27 @@
       font-size: 0.6rem;
     }
   }
+
+  a {
+    color:$white;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    transition: all 0.1s linear;
+  
+    &:hover {
+      color:$sunglow;
+
+    }
+  
+    @include breakpoint-responsive("xl") {
+      font-size: 0.9rem;
+    }
+    @include breakpoint-responsive("md") {
+      font-size: 0.8rem;
+    }
+  
+    @include breakpoint-responsive("xs") {
+      font-size: 0.6rem;
+    }
+  }
