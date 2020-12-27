@@ -780,6 +780,7 @@ button {
 }
 
 .btn-scroll {
+  display: none;
   position: fixed;
   bottom: 2rem;
   right: 2rem;

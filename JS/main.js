@@ -34,19 +34,29 @@ const menuBtn = document.querySelector('.menu-btn');
 
 function hamburgerMenu() {
     menuBtn.classList.toggle('close');
-    ulList.classList.toggle('show');  
+    ulList.classList.toggle('show');
 }
 
 menuBtn.addEventListener('click', hamburgerMenu)
 
 
-//  button scroll to top the page 
+//  Button scroll to top the page 
 
-function createBtn(){
+function createBtn() {
     const btnScroll = document.createElement('button')
-    btnScroll.textContent='TOP'
+    btnScroll.textContent = 'TOP'
     btnScroll.classList.add('btn-scroll')
     document.body.appendChild(btnScroll)
 }
 
 createBtn();
+
+const btnScrollTop = document.querySelector('.btn-scroll')
+
+//user scrolls down 100px from the top of the document, show the button
+window.addEventListener('scroll', function () {
+    if (document.body.scrollTop > 100|| document.documentElement.scrollTop > 100) {
+        btnScrollTop.style.display = "block"
+    } else
+        btnScrollTop.style.display = "none"
+});
