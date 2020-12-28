@@ -646,6 +646,16 @@ button {
   height: 100vh;
 }
 
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999999999;
+  border-bottom: 1px solid #FFFFFF;
+  background-color: #2f73a4;
+}
+
 .menu-btn {
   position: absolute;
   z-index: 99;
@@ -783,14 +793,22 @@ button {
   display: none;
   position: fixed;
   bottom: 2rem;
-  right: 2rem;
-  font-size: 16px;
+  right: 1.5rem;
+  font-size: 1rem;
   border-radius: 10%;
   border: none;
   outline: none;
   background-color: #C03221;
   color: white;
   padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .btn-scroll {
+    padding: 1rem;
+    font-size: 0.8rem;
+    right: .5rem;
+  }
 }
 
 .btn-scroll:hover {

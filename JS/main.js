@@ -69,3 +69,19 @@ function topPage() {
 }
 
 btnScrollTop.addEventListener('click', topPage)
+
+
+// Sticky navbar 
+
+const navMain = document.querySelector('.nav-main')
+
+function stickyFunction() {
+    if (window.scrollY > 0) {
+        navMain.classList.add('sticky');
+    } else if (window.scrollY <= 0) {
+        navMain.classList.remove('sticky')
+    }
+}
+
+
+window.addEventListener('scroll', stickyFunction)
