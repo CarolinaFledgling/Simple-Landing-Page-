@@ -652,8 +652,15 @@ button {
   top: 0;
   width: 100%;
   z-index: 999999999999;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1px solid transparent;
   background-color: #2f73a4;
+  background-position: bottom bottom;
+}
+
+.nav-main {
+  border-bottom: 1px solid #FFFFFF;
+  background-image: url("../assets/img/background.jpg");
+  background-position: top top;
 }
 
 .menu-btn {
