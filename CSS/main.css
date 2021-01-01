@@ -508,8 +508,8 @@ button {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 70px 1fr;
-      grid-template-rows: 70px 1fr;
+  -ms-grid-rows: 100px 1fr;
+      grid-template-rows: 100px 1fr;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -595,7 +595,7 @@ button {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-right: 1rem;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -637,6 +637,18 @@ button {
   }
 }
 
+.nav-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
 .hide {
   display: block;
 }
@@ -648,19 +660,14 @@ button {
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
-  width: 100%;
-  z-index: 999999999999;
   border-bottom: 1px solid transparent;
   background-color: #2f73a4;
   background-position: bottom bottom;
-}
-
-.nav-main {
   border-bottom: 1px solid #FFFFFF;
-  background-image: url("../assets/img/background.jpg");
-  background-position: top top;
+  z-index: 99999999999999999;
 }
 
 .menu-btn {

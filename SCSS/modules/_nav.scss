@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-right: 1rem;
+
+    width: 100%;
 
     @include breakpoint-responsive("md") {
         height: 0vh;
@@ -21,17 +22,25 @@
         transition: all .3s linear;
     }
 
-    &__link{
-        @include breakpoint-responsive("md"){
+    &__link {
+        @include breakpoint-responsive("md") {
             font-size: 1.5rem;
         }
     }
 
-    &__item{
-        @include breakpoint-responsive("md"){
-            margin:1rem 0
+    &__item {
+        @include breakpoint-responsive("md") {
+            margin: 1rem 0
         }
     }
+}
+
+.nav-main {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+
 }
 
 // for java script to show and hide elements 
@@ -46,27 +55,13 @@
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: 100%;
-    z-index: 999999999999;
     border-bottom: 1px solid transparent;
     background-color: darken($blue, 5);
     background-position: bottom bottom;
-
-  }
-
-  .nav-main{
     border-bottom: 1px solid $white;
-    background-image: url("../assets/img/background.jpg");
-    background-position: top top;
-  }
+    z-index: 99999999999999999;
 
+}
 
-
-
-
-  
-
-
-  
