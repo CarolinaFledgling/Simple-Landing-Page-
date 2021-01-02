@@ -350,6 +350,7 @@ template {
 }
 
 html {
+  scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #121113;
@@ -452,6 +453,9 @@ p {
 }
 
 a {
+  display: block;
+  height: 70px;
+  line-height: 70px;
   color: #FFFFFF;
   text-decoration: none;
   font-weight: 400;
@@ -505,10 +509,6 @@ button {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 100px 1fr;
-      grid-template-rows: 100px 1fr;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -567,7 +567,6 @@ button {
 }
 
 .header__logo {
-  margin: 1rem;
   height: 70px;
 }
 
@@ -615,7 +614,7 @@ button {
     top: 0;
     left: 0;
     z-index: 10;
-    background-color: #2f73a4;
+    background-color: #151e2d;
     opacity: 0.9;
     visibility: hidden;
     overflow: hidden;
@@ -640,19 +639,14 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background-image: url("../assets/img/background.jpg");
+  border-bottom: 1px solid #FFFFFF;
+  background-position: top center;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-}
-
-@media (max-width: 768px) {
-  .nav-main {
-    position: static;
-    top: 0;
-  }
+  z-index: 999;
+  height: 70px;
 }
 
 .hide {
@@ -666,13 +660,7 @@ button {
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   background-color: #2f73a4;
-  background-position: bottom bottom;
-  border-bottom: 1px solid #FFFFFF;
-  z-index: 99999999999;
 }
 
 .activeBackground {
@@ -684,7 +672,7 @@ button {
   position: absolute;
   z-index: 99;
   right: 10%;
-  top: 40px;
+  top: 25px;
   cursor: pointer;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;

@@ -14,7 +14,7 @@
         top: 0;
         left: 0;
         z-index: 10;
-        background-color: darken($blue, 5);
+        background-color: $dark-blue;
         opacity: 0.9;
         visibility: hidden;
         overflow: hidden;
@@ -36,15 +36,13 @@
 
 .nav-main {
     display: flex;
-    align-items: center;
+    background-image: url("../assets/img/background.jpg");
+    border-bottom: 1px solid $white;
+    background-position: top center;
     position: sticky;
     top: 0;
-
-    @include breakpoint-responsive("md") {
-        position: static;
-        top: 0;
-    }
-
+    z-index: 999;
+    height: 70px;
 }
 
 // for java script to show and hide elements 
@@ -59,12 +57,13 @@
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
-    position: sticky;
-    top: 0;
+    // position: sticky;
+    // top: 0;
     background-color: darken($blue, 5);
-    background-position: bottom bottom;
-    border-bottom: 1px solid $white;
-    z-index: 99999999999;
+    // background-position: bottom bottom;
+    // border-bottom: 1px solid $white;
+    // z-index: 99999999999;
+    // margin-top: 100px;
 
 }
 

@@ -78,20 +78,7 @@ function topPage() {
 btnScrollTop.addEventListener('click', topPage)
 
 
-// Sticky navbar 
 
-const navMain = document.querySelector('.nav-main')
-
-function stickyFunction() {
-    if (window.scrollY > 0) {
-        navMain.classList.add('sticky');
-    } else if (window.scrollY <= 0) {
-        navMain.classList.remove('sticky')
-    }
-}
-
-
-window.addEventListener('scroll', stickyFunction)
 
 // Highlighting current section in navbar
 
@@ -121,7 +108,7 @@ function smoothScroll() {
     navLinks.forEach((link) => {
         link.addEventListener('click', function (e) {
             e.preventDefault(); //prevent the default action of a click, allow to change the behaviour,In this case it will allow to scroll)
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
+            document.querySelector('section').scrollIntoView({
                 behavior: 'smooth'
             })
         })
