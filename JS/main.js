@@ -94,12 +94,6 @@ window.addEventListener('scroll', changeActiveNavBar)
 
 
 
-
-
-
-
-
-
 //Add Smooth scroll function to the anchor elements.
 
 const navLinks = document.querySelectorAll('a')
@@ -107,11 +101,23 @@ const navLinks = document.querySelectorAll('a')
 function smoothScroll() {
     navLinks.forEach((link) => {
         link.addEventListener('click', function (e) {
-            e.preventDefault(); //prevent the default action of a click, allow to change the behaviour,In this case it will allow to scroll)
-            document.querySelector('section').scrollIntoView({
-                behavior: 'smooth'
+            const LinkAttribut = link.getAttribute("href").substring(1);
+            console.log(LinkAttribut);
+            e.preventDefault();
+            //prevent the default action of a click, allow to change the behaviour,In this case it will allow to scroll
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section) => {
+                const sectionId = section.id
+                console.log(sectionId)
+                if (LinkAttribut === sectionId) {
+                    section.scrollIntoView({
+                        behavior: 'smooth'
+
+                    })
+                }
             })
         })
     })
 }
 smoothScroll()
+
