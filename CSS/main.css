@@ -350,6 +350,7 @@ template {
 }
 
 html {
+  scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #121113;
@@ -1139,6 +1140,9 @@ textarea {
 .footer-info__link {
   font-size: 0.8rem;
   color: #121113;
+  display: inline;
+  height: 10px;
+  line-height: 10px;
 }
 
 .footer-info__link:hover {
