@@ -350,7 +350,6 @@ template {
 }
 
 html {
-  scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #121113;
@@ -649,6 +648,13 @@ button {
   top: 0;
 }
 
+@media (max-width: 768px) {
+  .nav-main {
+    position: static;
+    top: 0;
+  }
+}
+
 .hide {
   display: block;
 }
@@ -663,11 +669,15 @@ button {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  border-bottom: 1px solid transparent;
   background-color: #2f73a4;
   background-position: bottom bottom;
   border-bottom: 1px solid #FFFFFF;
-  z-index: 99999999999999999;
+  z-index: 99999999999;
+}
+
+.activeBackground {
+  border-bottom: 1px solid #FFD23F;
+  color: #FFD23F;
 }
 
 .menu-btn {

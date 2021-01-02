@@ -1,3 +1,9 @@
+//* Manipulating the DOM exercise.
+//* Exercise programmatically builds navigation,
+//* scrolls to anchors from navigation,
+//* and highlights section in viewport upon scrolling.
+
+
 // *** A dynamic Navbar 
 
 //  Using DocumentFragment interface because is a lightweight version of the Document, if we make changes to the document fragment it doesnt affect the Document, doesnt change performance.
@@ -13,6 +19,7 @@ function createLiElement() {
         navListElement.classList.add('nav-list__item');
         const idSection = section.id;
         // console.log(idSection);
+
         const linkElement = document.createElement('a');
         linkElement.href = `#${idSection}`;
         linkElement.textContent = idSection;
@@ -85,3 +92,39 @@ function stickyFunction() {
 
 
 window.addEventListener('scroll', stickyFunction)
+
+// Highlighting current section in navbar
+
+
+function changeActiveNavBar() {
+
+
+}
+
+
+window.addEventListener('scroll', changeActiveNavBar)
+
+
+
+
+
+
+
+
+
+
+//Add Smooth scroll function to the anchor elements.
+
+const navLinks = document.querySelectorAll('a')
+
+function smoothScroll() {
+    navLinks.forEach((link) => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault(); //prevent the default action of a click, allow to change the behaviour,In this case it will allow to scroll)
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: 'smooth'
+            })
+        })
+    })
+}
+smoothScroll()
