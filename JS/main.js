@@ -83,14 +83,39 @@ btnScrollTop.addEventListener('click', topPage)
 // Highlighting current section in navbar
 
 
-function changeActiveNavBar() {
+function ActiveNavBar(id) {
+    const navLinks = document.querySelectorAll('a')
+    navLinks.forEach((link) => {
+        const linkAttribut = link.getAttribute("href").substring(1);
+        console.log(linkAttribut);
 
+        if (linkAttribut === id) {
+            link.classList.add('activeBackground')
+        } else {
+            link.classList.remove('activeBackground')
+        };
 
-}
+        if (linkAttribut === null) {
+            return
+        };
 
+    });
+};
 
-window.addEventListener('scroll', changeActiveNavBar)
+function activeSection() {
+    sections.forEach((section) => {
+        window.addEventListener('scroll', function () {
+            if (section.getBoundingClientRect().top + 200 < window.innerHeight && section.getBoundingClientRect().bottom + 200 > window.innerHeight) {
+                section.classList.add('activeSection');
+                ActiveNavBar(section.id);
+            } else {
+                section.classList.remove('activeSection');
+            };
+        });
+    });
+};
 
+activeSection();
 
 
 
@@ -102,13 +127,13 @@ function smoothScroll() {
     navLinks.forEach((link) => {
         link.addEventListener('click', function (e) {
             const LinkAttribut = link.getAttribute("href").substring(1);
-            console.log(LinkAttribut);
+            // console.log(LinkAttribut);
             e.preventDefault();
             //prevent the default action of a click, allow to change the behaviour,In this case it will allow to scroll
             const sections = document.querySelectorAll('section');
             sections.forEach((section) => {
                 const sectionId = section.id
-                console.log(sectionId)
+                // console.log(sectionId)
                 if (LinkAttribut === sectionId) {
                     section.scrollIntoView({
                         behavior: 'smooth'
@@ -120,4 +145,3 @@ function smoothScroll() {
     })
 }
 smoothScroll()
-

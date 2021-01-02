@@ -553,7 +553,7 @@ button {
   font-size: 1.2rem;
   letter-spacing: 0.5rem;
   font-weight: 500;
-  color: #A2B9DA;
+  color: #cfe0f8;
   text-align: center;
   line-height: 150%;
 }
@@ -658,14 +658,13 @@ button {
   height: 100vh;
 }
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  background-color: #2f73a4;
+.activeBackground {
+  background-color: #151e2d;
+  color: #FFD23F;
 }
 
-.activeBackground {
-  border-bottom: 1px solid #FFD23F;
-  color: #FFD23F;
+.activeSection {
+  background-color: #FBFCFF;
 }
 
 .menu-btn {
@@ -783,8 +782,8 @@ button {
 }
 
 .btn-secondary:hover {
-  background-color: #A2B9DA;
-  border: 2px solid #A2B9DA;
+  background-color: #cfe0f8;
+  border: 2px solid #cfe0f8;
 }
 
 @media (max-width: 768px) {
@@ -844,10 +843,10 @@ button {
   -webkit-column-gap: 2rem;
           column-gap: 2rem;
   padding: 0 2rem;
-  margin: 2rem 0;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+  height: 100vh;
 }
 
 @media (max-width: 768px) {
@@ -858,6 +857,7 @@ button {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
+    height: 80vh;
   }
 }
 

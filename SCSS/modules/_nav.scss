@@ -55,23 +55,14 @@
     height: 100vh;
 }
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-    // position: sticky;
-    // top: 0;
-    background-color: darken($blue, 5);
-    // background-position: bottom bottom;
-    // border-bottom: 1px solid $white;
-    // z-index: 99999999999;
-    // margin-top: 100px;
-
-}
-
 
 // While navigating through the page, the section that is active in the viewport should be distinguished from the other sections, thanks to  add class activeBackground 
 
-.activeBackground{
-    border-bottom: 1px solid $sunglow;
-    color:$sunglow;
-    
+.activeBackground {
+    background-color: $dark-blue;
+    color: $sunglow;
+}
+
+.activeSection {
+    background-color: $bgc-section;
 }
