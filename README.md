@@ -13,7 +13,7 @@ The project required me to build a landing page that uses JavaScript to create a
 * Scroll to Anchor - When clicking an item from the navigation menu, the link should scroll to the appropriate section.
 * Adding a scroll to top button on the page that’s only visible when the user scrolls below the fold of the page.
 
-## Preview the website live on : [DEMO](https://carolinafledgling.github.io/)
+## Preview the website live on : [DEMO](https://carolinafledgling.github.io/Simple-Landing-Page-/)
 
 ## Screenshots
 
