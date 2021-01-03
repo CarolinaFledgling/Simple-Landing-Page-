@@ -16,5 +16,6 @@ The project required me to build a landing page that uses JavaScript to create a
 ## Preview the website live on : [DEMO](https://carolinafledgling.github.io/Simple-Landing-Page-/)
 
 ## Screenshots
+![](assets/img/image-github.jpg)
 
 
