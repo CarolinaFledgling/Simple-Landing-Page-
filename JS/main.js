@@ -98,7 +98,7 @@ function ActiveNavBar(id) {
         if (linkAttribut === null) {
             return
         };
-        // **When my scroll it will be on header it delete the class which is responsibile for Highlighting elements in navbar 
+        // **When scroll it will be on header it delete the class which is responsibile for Highlighting elements in navbar 
         window.addEventListener('scroll', function () {
             const header = document.querySelector('.header')
             if (header.getBoundingClientRect().top + 200 < window.innerHeight && header.getBoundingClientRect().bottom + 200 > window.innerHeight) {
