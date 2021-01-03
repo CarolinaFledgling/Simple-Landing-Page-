@@ -8,6 +8,8 @@
 
 //  Using DocumentFragment interface because is a lightweight version of the Document, if we make changes to the document fragment it doesnt affect the Document, doesn`t change performance.
 
+const t0 = performance.now()
+
 const ulList = document.querySelector('.nav-list');
 const sections = document.querySelectorAll('section')
 
@@ -162,3 +164,6 @@ function smoothScroll() {
     })
 }
 smoothScroll()
+
+const t1 = performance.now();
+console.log("This code took " + (t1-t0).toFixed() + " miliseconds")
