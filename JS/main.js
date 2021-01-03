@@ -6,7 +6,7 @@
 
 // *** A dynamic Navbar 
 
-//  Using DocumentFragment interface because is a lightweight version of the Document, if we make changes to the document fragment it doesnt affect the Document, doesnt change performance.
+//  Using DocumentFragment interface because is a lightweight version of the Document, if we make changes to the document fragment it doesnt affect the Document, doesn`t change performance.
 
 const ulList = document.querySelector('.nav-list');
 const sections = document.querySelectorAll('section')
@@ -60,7 +60,7 @@ createBtn();
 
 const btnScrollTop = document.querySelector('.btn-scroll')
 
-//user scrolls down 100px from the top of the document, show the button
+//user scrolls down 100px from the top of the document, show the button TOP
 window.addEventListener('scroll', function () {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         btnScrollTop.style.display = "block"
@@ -98,7 +98,7 @@ function ActiveNavBar(id) {
         if (linkAttribut === null) {
             return
         };
-
+       
     });
 };
 
@@ -111,6 +111,7 @@ function activeSection() {
             } else {
                 section.classList.remove('activeSection');
             };
+
         });
     });
 };
@@ -129,7 +130,7 @@ function smoothScroll() {
             const LinkAttribut = link.getAttribute("href").substring(1);
             // console.log(LinkAttribut);
             e.preventDefault();
-            //prevent the default action of a click, allow to change the behaviour,In this case it will allow to scroll
+            //prevent the default action of a click, allow to change the behaviour, in this case it will allow to scroll
             const sections = document.querySelectorAll('section');
             sections.forEach((section) => {
                 const sectionId = section.id

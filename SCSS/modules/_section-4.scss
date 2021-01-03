@@ -14,6 +14,7 @@
     align-items: center;
     justify-content: center;
     margin: 1rem;
+
     @include breakpoint-responsive("md") {
         margin: 0.5rem;
     }
@@ -53,6 +54,7 @@
     border: 1px solid $white;
     border-radius: 5px;
     box-shadow: 0px 7px 5px -2px rgba(0, 0, 0, 0.32);
+
     @include breakpoint-responsive("md") {
         padding: 0.5rem;
         margin: 1rem;
@@ -62,6 +64,7 @@
 .input {
     margin: 1rem 0;
     padding: .5rem;
+
     @include breakpoint-responsive("md") {
         font-size: 0.8rem;
         margin: 0.5rem 0;
@@ -73,24 +76,24 @@
     font-size: 1.2rem;
     margin: 0.5rem 0;
     font-weight: 300;
+
     @include breakpoint-responsive("md") {
         font-size: 1rem;
         margin: 0.2rem;
     }
 }
 
-.label-ask{
+.label-ask {
     margin-top: 1rem;
     color: $white;
     font-weight: 300;
     font-size: 1.7rem;
+
     @include breakpoint-responsive("md") {
         font-size: 1rem;
-        
+
     }
 }
-
-
 
 textarea {
     padding: .5rem 0.2rem;
@@ -98,9 +101,10 @@ textarea {
     resize: none;
 }
 
-.btn-input{
+.btn-input {
     font-weight: 500;
     margin-top: 1rem;
+
     @include breakpoint-responsive("md") {
         font-size: 0.8rem;
         margin-right: 0;

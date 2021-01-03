@@ -14,8 +14,6 @@
     }
 }
 
-
-
 // Style for primary btn
 
 .btn-primary {
@@ -57,13 +55,13 @@
     border: 2px solid transparent;
     transition: all 0.3s linear;
     margin-left: 1rem;
-    color:$white;
+    color: $white;
     background-color: $blue;
 
     &:hover {
         background-color: $light-blue;
         border: 2px solid $light-blue;
-       
+
     }
 
     @include breakpoint-responsive("md") {
@@ -80,7 +78,7 @@
 
 // Button scroll to top 
 
-.btn-scroll{
+.btn-scroll {
     display: none;
     position: fixed;
     bottom: 2rem;
@@ -90,15 +88,16 @@
     border: none;
     outline: none;
     background-color: $red-orange;
-    color:white;
+    color: white;
     padding: 1.5rem;
-    @include breakpoint-responsive("md"){
+
+    @include breakpoint-responsive("md") {
         padding: 1rem;
         font-size: 0.8rem;
         right: .5rem;
     }
 }
 
-.btn-scroll:hover{
+.btn-scroll:hover {
     background-color: $red-orange-light;
 }
