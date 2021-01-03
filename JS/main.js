@@ -87,7 +87,7 @@ function ActiveNavBar(id) {
     const navLinks = document.querySelectorAll('a')
     navLinks.forEach((link) => {
         const linkAttribut = link.getAttribute("href").substring(1);
-        console.log(linkAttribut);
+        // console.log(linkAttribut);
 
         if (linkAttribut === id) {
             link.classList.add('activeBackground')
@@ -98,8 +98,19 @@ function ActiveNavBar(id) {
         if (linkAttribut === null) {
             return
         };
-       
+        // **When my scroll it will be on header it delete the class which is responsibile for Highlighting elements in navbar 
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.header')
+            if (header.getBoundingClientRect().top + 200 < window.innerHeight && header.getBoundingClientRect().bottom + 200 > window.innerHeight) {
+                link.classList.remove('activeBackground')
+            }
+
+        })
+
     });
+
+
+
 };
 
 function activeSection() {
@@ -107,6 +118,7 @@ function activeSection() {
         window.addEventListener('scroll', function () {
             if (section.getBoundingClientRect().top + 200 < window.innerHeight && section.getBoundingClientRect().bottom + 200 > window.innerHeight) {
                 section.classList.add('activeSection');
+                console.log(section.getBoundingClientRect().top)
                 ActiveNavBar(section.id);
             } else {
                 section.classList.remove('activeSection');
@@ -117,6 +129,10 @@ function activeSection() {
 };
 
 activeSection();
+
+console.log(window.innerHeight)
+
+
 
 
 
