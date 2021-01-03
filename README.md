@@ -1,4 +1,4 @@
-# Simple-Landing-Page-
+# Simple Landing Page
 
 ## Description 
 This project was made independently and without any starter code. The project is made with HTML, CSS and JavaScript, following a series of lectures on the theme “JavaScript & the DOM”.
