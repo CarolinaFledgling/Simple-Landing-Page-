@@ -1,7 +1,7 @@
 # Simple Landing Page
 
 ## Description 
-This project was made independently and without any starter code. The project is made with HTML, CSS and JavaScript, following a series of lectures on the theme “JavaScript & the DOM”.
+This project was made independently and without any starter code. It is made with HTML, CSS and JavaScript, following a series of lectures on the theme “JavaScript & the DOM”.
 
 ## General info
 The project required me to build a landing page that uses JavaScript to create an interactive navigational.
