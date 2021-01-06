@@ -14,7 +14,7 @@
         grid-template-columns: 1fr;
         padding: 0.5rem;
         grid-row: 2/3;
-        // height: 80vh;
+        
     }
 
     @include breakpoint-responsive("xs") {

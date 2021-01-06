@@ -52,10 +52,10 @@ menuBtn.addEventListener('click', hamburgerMenu)
 //  Button scroll to top the page 
 
 function createBtn() {
-    const btnScroll = document.createElement('button')
-    btnScroll.textContent = 'TOP'
-    btnScroll.classList.add('btn-scroll')
-    document.body.appendChild(btnScroll)
+    const btnScroll = document.createElement('button');
+    btnScroll.textContent = 'TOP';
+    btnScroll.classList.add('btn-scroll');
+    document.body.appendChild(btnScroll);
 }
 
 createBtn();
@@ -65,9 +65,9 @@ const btnScrollTop = document.querySelector('.btn-scroll')
 //user scrolls down 100px from the top of the document, show the button TOP
 window.addEventListener('scroll', function () {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        btnScrollTop.style.display = "block"
+        btnScrollTop.style.display = "block";
     } else
-        btnScrollTop.style.display = "none"
+        btnScrollTop.style.display = "none";
 });
 
 //user clicks on the button, scroll to the top of the document
@@ -77,7 +77,7 @@ function topPage() {
     document.documentElement.scrollTop = 0;
 }
 
-btnScrollTop.addEventListener('click', topPage)
+btnScrollTop.addEventListener('click', topPage);
 
 
 
@@ -92,19 +92,19 @@ function ActiveNavBar(id) {
         // console.log(linkAttribut);
 
         if (linkAttribut === id) {
-            link.classList.add('activeBackground')
+            link.classList.add('activeBackground');
         } else {
-            link.classList.remove('activeBackground')
-        };
+            link.classList.remove('activeBackground');
+        }
 
         if (linkAttribut === null) {
-            return
+            return;
         };
         // **When scroll it will be on header it delete the class which is responsibile for Highlighting elements in navbar 
         window.addEventListener('scroll', function () {
-            const header = document.querySelector('.header')
+            const header = document.querySelector('.header');
             if (header.getBoundingClientRect().top + 200 < window.innerHeight && header.getBoundingClientRect().bottom + 200 > window.innerHeight) {
-                link.classList.remove('activeBackground')
+                link.classList.remove('activeBackground');
             }
 
         })
@@ -120,7 +120,7 @@ function activeSection() {
         window.addEventListener('scroll', function () {
             if (section.getBoundingClientRect().top + 200 < window.innerHeight && section.getBoundingClientRect().bottom + 200 > window.innerHeight) {
                 section.classList.add('activeSection');
-                console.log(section.getBoundingClientRect().top)
+                console.log(section.getBoundingClientRect().top);
                 ActiveNavBar(section.id);
             } else {
                 section.classList.remove('activeSection');
@@ -151,7 +151,7 @@ function smoothScroll() {
             //prevent the default action of a click, allow to change the behaviour, in this case it will allow to scroll
             const sections = document.querySelectorAll('section');
             sections.forEach((section) => {
-                const sectionId = section.id
+                const sectionId = section.id;
                 // console.log(sectionId)
                 if (LinkAttribut === sectionId) {
                     section.scrollIntoView({
@@ -166,4 +166,4 @@ function smoothScroll() {
 smoothScroll()
 
 const t1 = performance.now();
-console.log("This code took " + (t1-t0).toFixed() + " miliseconds")
+console.log("This code took " + (t1 - t0).toFixed() + " miliseconds");
