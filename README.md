@@ -25,12 +25,13 @@ The project required me to build a landing page that uses JavaScript to create a
 👉 More info: [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment?fbclid=IwAR1MqMUEumETf5qHSclfQxLIIcJj2sQ7YgGiGoovXNW9VNcU6PX-vjqQBU4-/)
 
 
+
 * `behavior: 'smooth'` there is a native CSS feature for this: scroll-behavior 
 <p align="center">
   <img src="assets/img/smooth.jpg"/>
 </p>
 
-###### For browsers that do not support the scroll-behavior property, you can use JavaScript or a JavaScript library, like jQuery, to create a solution that will work for all browsers: 
+_For browsers that do not support the scroll-behavior property, you can use JavaScript or a JavaScript library, like jQuery, to create a solution that will work for all browsers_
 
 `document.querySelector('.hello').scrollIntoView({ behavior: 'smooth' })`
 
@@ -40,3 +41,6 @@ The project required me to build a landing page that uses JavaScript to create a
 * `performance.now()` - The standard way to measure how long it takes code to run is by using `performance.now()`. It  returns a timestamp that is measured in milliseconds.
 
 👉 More info: [Testing Code Performance](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now)
+
+
+
