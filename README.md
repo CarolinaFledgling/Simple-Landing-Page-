@@ -18,4 +18,11 @@ The project required me to build a landing page that uses JavaScript to create a
 ## Screenshots
 ![](assets/img/image-github.jpg)
 
+## Code Examples
 
+* `document.createDocumentFragment()` The DocumentFragment interface is a lightweight version of the Document that stores a piece of document structure like a standard document. DocumentFragment isn’t part of the active DOM tree ,any changes in document fragment, it doesn't affect the document or performance.
+
+👉 More info: [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment?fbclid=IwAR1MqMUEumETf5qHSclfQxLIIcJj2sQ7YgGiGoovXNW9VNcU6PX-vjqQBU4-/)
+
+* `behavior: 'smooth'` there is a native CSS feature for this: scroll-behavior 
+![](assets/img/smooth.jpg)
