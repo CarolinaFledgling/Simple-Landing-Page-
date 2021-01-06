@@ -14,24 +14,44 @@ const ulList = document.querySelector('.nav-list');
 const sections = document.querySelectorAll('section')
 
 
+// function createLiElement() {
+//     const fragment = document.createDocumentFragment();
+//     sections.forEach((section) => {
+//         const navListElement = document.createElement('li');
+//         navListElement.classList.add('nav-list__item');
+//         const idSection = section.id;
+//         // console.log(idSection);
+//         const linkElement = document.createElement('a');
+//         linkElement.href = `#${idSection}`;
+//         linkElement.textContent = idSection;
+//         linkElement.classList.add('nav-list__link');
+//         // console.log(linkElement);
+//         navListElement.appendChild(linkElement)
+//         fragment.appendChild(navListElement)
+//     })
+//     ulList.appendChild(fragment)
+   
+// }
+
+//  WERSJA BEZ FRAGMENT , zapytac o różnice 
+
 function createLiElement() {
-    const fragment = document.createDocumentFragment();
     sections.forEach((section) => {
         const navListElement = document.createElement('li');
         navListElement.classList.add('nav-list__item');
         const idSection = section.id;
-        // console.log(idSection);
-
         const linkElement = document.createElement('a');
         linkElement.href = `#${idSection}`;
         linkElement.textContent = idSection;
         linkElement.classList.add('nav-list__link');
-        // console.log(linkElement);
+        
         navListElement.appendChild(linkElement)
-        fragment.appendChild(navListElement)
+        console.log(navListElement);
+        ulList.appendChild(navListElement)
+
     })
-    ulList.appendChild(fragment)
-    console.log(ulList)
+
+   
 }
 
 
@@ -59,6 +79,8 @@ function createBtn() {
 }
 
 createBtn();
+
+/*  ZAPYTAC SIE !!! o document.documentElement.scrollTop  */
 
 const btnScrollTop = document.querySelector('.btn-scroll')
 
@@ -120,7 +142,7 @@ function activeSection() {
         window.addEventListener('scroll', function () {
             if (section.getBoundingClientRect().top + 200 < window.innerHeight && section.getBoundingClientRect().bottom + 200 > window.innerHeight) {
                 section.classList.add('activeSection');
-                console.log(section.getBoundingClientRect().top);
+                // console.log(section.getBoundingClientRect().top);
                 ActiveNavBar(section.id);
             } else {
                 section.classList.remove('activeSection');
@@ -132,7 +154,7 @@ function activeSection() {
 
 activeSection();
 
-console.log(window.innerHeight)
+// console.log(window.innerHeight)
 
 
 
@@ -156,7 +178,6 @@ function smoothScroll() {
                 if (LinkAttribut === sectionId) {
                     section.scrollIntoView({
                         behavior: 'smooth'
-
                     })
                 }
             })
