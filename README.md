@@ -20,13 +20,14 @@ The project required me to build a landing page that uses JavaScript to create a
 
 ## Code Examples
 
-* `document.createDocumentFragment()` The DocumentFragment interface is a lightweight version of the Document that stores a piece of document structure like a standard document. DocumentFragment isn’t part of the active DOM tree ,any changes in document fragment, it doesn't affect the document or performance.
+### The DocumentFragment interface: `document.createDocumentFragment()`  is a lightweight version of the Document that stores a piece of document structure like a standard document. DocumentFragment isn’t part of the active DOM tree ,any changes in document fragment, it doesn't affect the document or performance.
 
 👉 More info: [DocumentFragment](https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment?fbclid=IwAR1MqMUEumETf5qHSclfQxLIIcJj2sQ7YgGiGoovXNW9VNcU6PX-vjqQBU4-/)
 
 
 
-* `behavior: 'smooth'` there is a native CSS feature for this: scroll-behavior 
+### Behavior - smooth :`behavior: 'smooth'` there is a native CSS feature for this: scroll-behavior
+
 <p align="center">
   <img src="assets/img/smooth.jpg"/>
 </p>
@@ -38,7 +39,7 @@ _For browsers that do not support the scroll-behavior property, you can use Java
 👉 More info: [smooth scroll behavior](http://iamdustan.com/smoothscroll/)
 
 
-* `performance.now()` - The standard way to measure how long it takes code to run is by using `performance.now()`. It  returns a timestamp that is measured in milliseconds.
+### Performance.now():  `performance.now()` - The standard way to measure how long it takes code to run is by using `performance.now()`. It  returns a timestamp that is measured in milliseconds.
 
 👉 More info: [Testing Code Performance](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now)
 
