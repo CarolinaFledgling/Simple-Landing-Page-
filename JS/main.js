@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const navListElement = document.createElement('li');
             navListElement.classList.add('nav-list__item');
             const idSection = section.id;
-            // console.log(idSection);
             const linkElement = document.createElement('a');
             linkElement.href = `#${idSection}`;
             linkElement.textContent = idSection;
