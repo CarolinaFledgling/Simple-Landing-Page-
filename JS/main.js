@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
             linkElement.href = `#${idSection}`;
             linkElement.textContent = idSection;
             linkElement.classList.add('nav-list__link');
-            // console.log(linkElement);
             navListElement.appendChild(linkElement)
             fragment.appendChild(navListElement)
         })
@@ -85,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function ActiveNavBar(id) {
         const navLinks = document.querySelectorAll('a')
         navLinks.forEach((link) => {
-            const linkAttribut = link.getAttribute("href").substring(1);
             const linkAttribut = link.getAttribute("href").substring(1);
             if (linkAttribut === id) {
                 link.classList.add('activeBackground');
