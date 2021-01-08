@@ -39,9 +39,7 @@ _For browsers that do not support the scroll-behavior property, you can use Java
 👉 More info: [smooth scroll behavior](http://iamdustan.com/smoothscroll/)
 
 
-### Performance.now(): The standard way to measure how long it takes code to run is by using `performance.now()`. It  returns a timestamp that is measured in milliseconds.
 
-👉 More info: [Testing Code Performance](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now)
 
 
 
